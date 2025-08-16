@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - Data Engineering Portfolio{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center mb-5">Data Engineering Blog</h1>
+            <p class="lead text-center mb-5">Insights, tutorials, and thoughts on data engineering</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- Sample Blog Post 1 -->
+            <article class="card mb-4">
+                <div class="card-header">
+                    <h2 class="card-title">Building Scalable Data Pipelines with Apache Airflow</h2>
+                    <small class="text-muted">Published on August 15, 2025 | 5 min read</small>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Apache Airflow has become the de facto standard for orchestrating data workflows. In this post, we'll explore best practices for building maintainable and scalable data pipelines...</p>
+                    <div class="mb-3">
+                        <span class="badge bg-primary me-2">Apache Airflow</span>
+                        <span class="badge bg-secondary me-2">Data Pipelines</span>
+                        <span class="badge bg-secondary me-2">Python</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </article>
+            
+            <!-- Sample Blog Post 2 -->
+            <article class="card mb-4">
+                <div class="card-header">
+                    <h2 class="card-title">Real-time Data Processing with Apache Kafka and Spark</h2>
+                    <small class="text-muted">Published on August 10, 2025 | 7 min read</small>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Stream processing is essential for modern data architectures. This tutorial covers how to set up a robust streaming pipeline using Kafka for ingestion and Spark for processing...</p>
+                    <div class="mb-3">
+                        <span class="badge bg-primary me-2">Apache Kafka</span>
+                        <span class="badge bg-secondary me-2">Apache Spark</span>
+                        <span class="badge bg-secondary me-2">Streaming</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </article>
+            
+            <!-- Sample Blog Post 3 -->
+            <article class="card mb-4">
+                <div class="card-header">
+                    <h2 class="card-title">Data Quality: The Foundation of Reliable Analytics</h2>
+                    <small class="text-muted">Published on August 5, 2025 | 4 min read</small>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Poor data quality can undermine even the most sophisticated analytics. Learn strategies for implementing comprehensive data quality checks in your data engineering workflows...</p>
+                    <div class="mb-3">
+                        <span class="badge bg-primary me-2">Data Quality</span>
+                        <span class="badge bg-secondary me-2">Testing</span>
+                        <span class="badge bg-secondary me-2">Validation</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </article>
+            
+            <!-- Sample Blog Post 4 -->
+            <article class="card mb-4">
+                <div class="card-header">
+                    <h2 class="card-title">Cloud Data Warehousing: BigQuery vs Redshift vs Snowflake</h2>
+                    <small class="text-muted">Published on July 30, 2025 | 8 min read</small>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Choosing the right cloud data warehouse can make or break your analytics strategy. This comprehensive comparison covers performance, cost, and feature differences...</p>
+                    <div class="mb-3">
+                        <span class="badge bg-primary me-2">Data Warehousing</span>
+                        <span class="badge bg-secondary me-2">BigQuery</span>
+                        <span class="badge bg-secondary me-2">Redshift</span>
+                        <span class="badge bg-secondary me-2">Snowflake</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </article>
+            
+            <!-- Pagination -->
+            <nav aria-label="Blog pagination" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <span class="page-link">Previous</span>
+                    </li>
+                    <li class="page-item active">
+                        <span class="page-link">1</span>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock %}
