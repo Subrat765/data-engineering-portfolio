@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "title": "Real-time Data Pipeline with Apache Kafka and Spark",
+    "description": "Built a scalable real-time data processing pipeline using Apache Kafka for data ingestion and Apache Spark for stream processing. Processes over 100,000 events per second with sub-second latency.",
+    "image": "/static/images/kafka-spark-pipeline.jpg",
+    "technologies": ["Apache Kafka", "Apache Spark", "Python", "Docker", "Kubernetes", "PostgreSQL"],
+    "demo_url": "https://github.com/yourusername/kafka-spark-pipeline",
+    "github_url": "https://github.com/yourusername/kafka-spark-pipeline",
+    "duration": "6 months",
+    "team_size": "3 engineers",
+    "detailed_description": "<p>This project involved building a comprehensive real-time data processing system capable of handling high-volume streaming data. The system architecture includes:</p><ul><li>Apache Kafka cluster for reliable message ingestion</li><li>Apache Spark Streaming for real-time data processing</li><li>PostgreSQL for storing processed results</li><li>Docker containerization for easy deployment</li><li>Kubernetes orchestration for scalability</li></ul>",
+    "features": [
+      "Real-time data ingestion from multiple sources",
+      "Fault-tolerant stream processing",
+      "Automatic scaling based on data volume",
+      "Comprehensive monitoring and alerting",
+      "Data quality validation and cleansing"
+    ],
+    "challenges": [
+      {
+        "problem": "High memory usage during peak loads causing system crashes",
+        "solution": "Implemented dynamic memory management and optimized Spark configurations for better resource utilization"
+      },
+      {
+        "problem": "Data consistency issues across distributed processing nodes",
+        "solution": "Implemented exactly-once processing semantics using Kafka's transactional features"
+      }
+    ],
+    "metrics": [
+      {"name": "Throughput", "value": "100K+ events/sec"},
+      {"name": "Latency", "value": "<500ms"},
+      {"name": "Uptime", "value": "99.9%"}
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Cloud Data Warehouse with ETL Automation",
+    "description": "Designed and implemented a cloud-native data warehouse solution on AWS with automated ETL pipelines using Apache Airflow. Reduced data processing time by 70% and improved data quality.",
+    "image": "/static/images/cloud-data-warehouse.jpg",
+    "technologies": ["AWS Redshift", "Apache Airflow", "Python", "AWS S3", "AWS Glue", "dbt"],
+    "demo_url": null,
+    "github_url": "https://github.com/yourusername/cloud-data-warehouse",
+    "duration": "8 months",
+    "team_size": "5 engineers",
+    "detailed_description": "<p>This comprehensive data warehouse solution transformed the organization's data infrastructure by:</p><ul><li>Migrating from legacy on-premise systems to AWS cloud</li><li>Implementing automated ETL pipelines with Apache Airflow</li><li>Setting up data quality monitoring and validation</li><li>Creating self-service analytics capabilities</li><li>Establishing data governance and lineage tracking</li></ul>",
+    "features": [
+      "Automated daily ETL processing of 500GB+ data",
+      "Real-time data quality monitoring",
+      "Self-service analytics portal",
+      "Automated data lineage tracking",
+      "Cost optimization through intelligent data tiering"
+    ],
+    "challenges": [
+      {
+        "problem": "Legacy data sources with inconsistent formats and quality",
+        "solution": "Built comprehensive data validation and transformation framework with automated error handling"
+      },
+      {
+        "problem": "High AWS costs due to inefficient data storage patterns",
+        "solution": "Implemented intelligent data lifecycle management and compression strategies, reducing costs by 40%"
+      }
+    ],
+    "metrics": [
+      {"name": "Data Volume", "value": "2TB daily"},
+      {"name": "Processing Time", "value": "70% reduction"},
+      {"name": "Cost Savings", "value": "40%"}
+    ]
+  }
+]
