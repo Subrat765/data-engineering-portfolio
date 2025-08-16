@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - Data Engineering Portfolio{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center mb-5">My Projects</h1>
+            <p class="lead text-center mb-5">Here are some of the data engineering projects I've worked on</p>
+        </div>
+    </div>
+    
+    <div class="row" id="projects-container">
+        <!-- Projects will be loaded here via JavaScript -->
+    </div>
+    
+    <!-- Project cards template (initially hidden) -->
+    <div id="project-template" style="display: none;">
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+                <img src="" class="card-img-top project-image" alt="Project screenshot">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title project-title"></h5>
+                    <p class="card-text project-description"></p>
+                    <div class="mt-auto">
+                        <div class="mb-3">
+                            <h6>Technologies:</h6>
+                            <div class="project-technologies">
+                                <!-- Technology badges will be inserted here -->
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <a href="#" class="btn btn-primary project-demo" target="_blank">View Demo</a>
+                            <a href="#" class="btn btn-outline-secondary project-details">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Load projects from JSON data
+fetch('/static/project_data/projects.json')
+    .then(response => response.json())
+    .then(projects => {
+        const container = document.getElementById('projects-container');
+        const template = document.getElementById('project-template');
+        
+        projects.forEach(project => {
+            const projectCard = template.cloneNode(true);
+            projectCard.style.display = 'block';
+            projectCard.removeAttribute('id');
+            
+            // Fill in project data
+            projectCard.querySelector('.project-image').src = project.image;
+            projectCard.querySelector('.project-title').textContent = project.title;
+            projectCard.querySelector('.project-description').textContent = project.description;
+            
+            // Add technology badges
+            const techContainer = projectCard.querySelector('.project-technologies');
+            project.technologies.forEach(tech => {
+                const badge = document.createElement('span');
+                badge.className = 'badge bg-secondary me-2 mb-1';
+                badge.textContent = tech;
+                techContainer.appendChild(badge);
+            });
+            
+            // Set links
+            if (project.demo_url) {
+                projectCard.querySelector('.project-demo').href = project.demo_url;
+            } else {
+                projectCard.querySelector('.project-demo').style.display = 'none';
+            }
+            
+            projectCard.querySelector('.project-details').href = `/project/${project.id}`;
+            
+            container.appendChild(projectCard);
+        });
+    })
+    .catch(error => {
+        console.error('Error loading projects:', error);
+        document.getElementById('projects-container').innerHTML = 
+            '<div class="col-12"><div class="alert alert-warning" role="alert">Unable to load projects at this time.</div></div>';
+    });
+</script>
+{% endblock %}
