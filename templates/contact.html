@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Contact - Data Engineering Portfolio{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-5">Contact Me</h1>
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <form class="contact-form">
+                <div class="mb-3">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Subject</label>
+                    <input type="text" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            
+            <div class="mt-5 text-center">
+                <h3>Get in Touch</h3>
+                <p class="mb-4">Feel free to reach out for collaborations or just a friendly hello!</p>
+                
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> your.email@example.com</p>
+                    <p><i class="fab fa-linkedin"></i> linkedin.com/in/yourprofile</p>
+                    <p><i class="fab fa-github"></i> github.com/yourusername</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
