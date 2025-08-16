@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project.title }} - Data Engineering Portfolio{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('projects') }}">Projects</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ project.title }}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="row mb-5">
+        <div class="col-lg-8">
+            <h1 class="mb-4">{{ project.title }}</h1>
+            <img src="{{ project.image }}" class="img-fluid rounded mb-4" alt="{{ project.title }} screenshot">
+            
+            <div class="mb-4">
+                <h3>Project Overview</h3>
+                <p class="lead">{{ project.description }}</p>
+            </div>
+            
+            <div class="mb-4">
+                <h3>Technical Details</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Technologies Used:</h5>
+                        <div class="mb-3">
+                            {% for tech in project.technologies %}
+                                <span class="badge bg-secondary me-2 mb-1">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Duration:</h5>
+                        <p>{{ project.duration or 'N/A' }}</p>
+                        
+                        <h5>Team Size:</h5>
+                        <p>{{ project.team_size or 'Solo Project' }}</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <h3>Detailed Description</h3>
+                <div class="project-details">
+                    {% if project.detailed_description %}
+                        {{ project.detailed_description | safe }}
+                    {% else %}
+                        <p>This project demonstrates expertise in data engineering through:</p>
+                        <ul>
+                            <li>Scalable data pipeline development</li>
+                            <li>Real-time data processing capabilities</li>
+                            <li>Cloud infrastructure optimization</li>
+                            <li>Data quality and monitoring solutions</li>
+                        </ul>
+                        <p>The implementation showcases best practices in data engineering including 
+                           proper error handling, monitoring, testing, and documentation.</p>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <h3>Key Features</h3>
+                <ul class="list-group list-group-flush">
+                    {% if project.features %}
+                        {% for feature in project.features %}
+                            <li class="list-group-item">{{ feature }}</li>
+                        {% endfor %}
+                    {% else %}
+                        <li class="list-group-item">Automated data ingestion and processing</li>
+                        <li class="list-group-item">Real-time monitoring and alerting</li>
+                        <li class="list-group-item">Scalable architecture design</li>
+                        <li class="list-group-item">Data quality validation</li>
+                        <li class="list-group-item">Performance optimization</li>
+                    {% endif %}
+                </ul>
+            </div>
+            
+            {% if project.challenges %}
+            <div class="mb-4">
+                <h3>Challenges & Solutions</h3>
+                <div class="challenges-solutions">
+                    {% for challenge in project.challenges %}
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h6 class="card-title text-warning">Challenge:</h6>
+                                <p class="card-text">{{ challenge.problem }}</p>
+                                <h6 class="card-title text-success">Solution:</h6>
+                                <p class="card-text">{{ challenge.solution }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="card sticky-top" style="top: 20px;">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Project Links</h5>
+                </div>
+                <div class="card-body">
+                    {% if project.demo_url %}
+                        <a href="{{ project.demo_url }}" class="btn btn-primary btn-block mb-3" target="_blank">
+                            <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                        </a>
+                    {% endif %}
+                    
+                    {% if project.github_url %}
+                        <a href="{{ project.github_url }}" class="btn btn-outline-dark btn-block mb-3" target="_blank">
+                            <i class="fab fa-github me-2"></i>View Code
+                        </a>
+                    {% endif %}
+                    
+                    <a href="{{ url_for('projects') }}" class="btn btn-outline-secondary btn-block">
+                        <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                    </a>
+                </div>
+                
+                {% if project.metrics %}
+                <div class="card-footer">
+                    <h6>Project Metrics</h6>
+                    <small class="text-muted">
+                        {% for metric in project.metrics %}
+                            <div class="d-flex justify-content-between">
+                                <span>{{ metric.name }}:</span>
+                                <strong>{{ metric.value }}</strong>
+                            </div>
+                        {% endfor %}
+                    </small>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
