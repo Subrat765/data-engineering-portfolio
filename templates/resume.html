@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Resume - Data Engineering Portfolio{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1>Resume</h1>
+        <a href="/static/files/resume.pdf" class="btn btn-primary" target="_blank">
+            <i class="fas fa-download"></i> Download PDF
+        </a>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <section class="mb-5">
+                <h2>Experience</h2>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5>Senior Data Engineer</h5>
+                        <h6 class="text-muted">Company Name | 2022 - Present</h6>
+                        <ul>
+                            <li>Built scalable data pipelines processing 100+ GB daily</li>
+                            <li>Implemented real-time streaming with Apache Kafka</li>
+                            <li>Reduced data processing time by 40% through optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="mb-5">
+                <h2>Education</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Bachelor of Science in Computer Science</h5>
+                        <h6 class="text-muted">University Name | 2018 - 2022</h6>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="mb-5">
+                <h2>Skills</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Programming Languages</h6>
+                        <p>Python, SQL, Scala, Java</p>
+                        
+                        <h6>Big Data Technologies</h6>
+                        <p>Apache Spark, Hadoop, Kafka</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Cloud Platforms</h6>
+                        <p>AWS, GCP, Azure</p>
+                        
+                        <h6>Databases</h6>
+                        <p>PostgreSQL, MongoDB, Redis</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+{% endblock %}
