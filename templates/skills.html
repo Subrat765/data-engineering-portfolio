@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block title %}Skills - Data Engineering Portfolio{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center mb-5">Technical Skills</h1>
+            <p class="lead text-center mb-5">Here's my toolkit for building robust data engineering solutions</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-database me-2"></i>Data Engineering
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="skill-category">
+                        <h6>ETL/ELT Tools</h6>
+                        <div class="skill-tags mb-3">
+                            <span class="badge bg-secondary me-2 mb-1">Apache Airflow</span>
+                            <span class="badge bg-secondary me-2 mb-1">Apache NiFi</span>
+                            <span class="badge bg-secondary me-2 mb-1">dbt</span>
+                            <span class="badge bg-secondary me-2 mb-1">Apache Beam</span>
+                        </div>
+                        
+                        <h6>Streaming</h6>
+                        <div class="skill-tags mb-3">
+                            <span class="badge bg-secondary me-2 mb-1">Apache Kafka</span>
+                            <span class="badge bg-secondary me-2 mb-1">Apache Flink</span>
+                            <span class="badge bg-secondary me-2 mb-1">Apache Storm</span>
+                        </div>
+                        
+                        <h6>Big Data</h6>
+                        <div class="skill-tags">
+                            <span class="badge bg-secondary me-2 mb-1">Apache Spark</span>
+                            <span class="badge bg-secondary me-2 mb-1">Hadoop</span>
+                            <span class="badge bg-secondary me-2 mb-1">HDFS</span>
+                            <span class="badge bg-secondary me-2 mb-1">Hive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-success text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-cloud me-2"></i>Cloud Platforms
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="skill-category">
+                        <h6>Amazon Web Services</h6>
+                        <div class="skill-tags mb-3">
+                            <span class="badge bg-secondary me-2 mb-1">S3</span>
+                            <span class="badge bg-secondary me-2 mb-1">Redshift</span>
+                            <span class="badge bg-secondary me-2 mb-1">Glue</span>
+                            <span class="badge bg-secondary me-2 mb-1">EMR</span>
+                            <span class="badge bg-secondary me-2 mb-1">Lambda</span>
+                        </div>
+                        
+                        <h6>Google Cloud Platform</h6>
+                        <div class="skill-tags mb-3">
+                            <span class="badge bg-secondary me-2 mb-1">BigQuery</span>
+                            <span class="badge bg-secondary me-2 mb-1">Dataflow</span>
+                            <span class="badge bg-secondary me-2 mb-1">Pub/Sub</span>
+                            <span class="badge bg-secondary me-2 mb-1">Cloud Storage</span>
+                        </div>
+                        
+                        <h6>Microsoft Azure</h6>
+                        <div class="skill-tags">
+                            <span class="badge bg-secondary me-2 mb-1">Data Factory</span>
+                            <span class="badge bg-secondary me-2 mb-1">Synapse</span>
+                            <span class="badge bg-secondary me-2 mb-1">Event Hubs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-info text-white">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-code me-2"></i>Programming Languages
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span><strong>Python</strong></span>
+                            <span>Expert</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span><strong>SQL</strong></span>
+                            <span>Expert</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span><strong>Scala</strong></span>
+                            <span>Intermediate</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span><strong>Java</strong></span>
+                            <span>Intermediate</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-warning text-dark">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-tools me-2"></i>Tools & Technologies
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="skill-category">
+                        <h6>Databases</h6>
+                        <div class="skill-tags mb-3">
+                            <span class="badge bg-secondary me-2 mb-1">PostgreSQL</span>
+                            <span class="badge bg-secondary me-2 mb-1">MySQL</span>
+                            <span class="badge bg-secondary me-2 mb-1">MongoDB</span>
+                            <span class="badge bg-secondary me-2 mb-1">Cassandra</span>
+                            <span class="badge bg-secondary me-2 mb-1">Redis</span>
+                        </div>
+                        
+                        <h6>Containerization</h6>
+                        <div class="skill-tags mb-3">
+                            <span class="badge bg-secondary me-2 mb-1">Docker</span>
+                            <span class="badge bg-secondary me-2 mb-1">Kubernetes</span>
+                        </div>
+                        
+                        <h6>Version Control & CI/CD</h6>
+                        <div class="skill-tags">
+                            <span class="badge bg-secondary me-2 mb-1">Git</span>
+                            <span class="badge bg-secondary me-2 mb-1">Jenkins</span>
+                            <span class="badge bg-secondary me-2 mb-1">GitLab CI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
